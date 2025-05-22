@@ -1,36 +1,47 @@
+# UiPath-Experiment-4
+# Date:05/05/2025
+# Register No.:212224240041
+# Name: FRANKLIN F
 # AIM:
-To develop a UiPath workflow that takes a user’s name as input and displays a custom welcome message using a Switch case. If the input is "RAM", it should display "Welcome Mr. Ramachandran", else display different messages for each name, and a default message for other names.
-
-# SOFTWARE REQUIRED:
-```
-UiPath Studio (2021 or later version recommended)
-Windows Operating System
-```
-
-# PROCEDURE:
-```
-1.Open UiPath Studio and create a new Process.
-2.Inside the Main.xaml, drag and drop a Sequence activity.
-3.Add an Input Dialog activity to get the user’s name.
-4.Set the Title as "Name Input" and Label as "Enter your name:"
-5.Store the result in a variable named userName (type: String).
-6.Add an Assign activity: nameToCheck = userName.ToUpper() (to make the comparison case-insensitive).
-7.Drag and drop a Switch activity.
-8.Set Expression as nameToCheck.
-9.Set TypeArgument as String
-10.Add different Case blocks:
-11.Case "RAM" → Message Box: "Welcome Mr. Ramachandran".
-12.Case "RAHUL" → Message Box: "Welcome Rahul, Have a great day!".
-13.Case "SITA" → Message Box: "Hello Sita, glad to see you!".
-14.In the Default case, Add:Message Box: "Welcome " + userName.
-15.Save and run the workflow.
-```
-
-# OUTPUT:
-![image](https://github.com/user-attachments/assets/afe3bbe6-edb2-4e3d-8f3c-d700c508bd8a)
-![image](https://github.com/user-attachments/assets/eb147115-10fa-4ac3-83aa-ccb442f01e12)
+Read data from an Excel file and write it to another Excel file.
 
 
+# Requirements:
+1.) Laptop
 
-# RESULT:
-The UiPath workflow was successfully created and executed. It accepted the user’s name as input and displayed a customized welcome message using a Switch case, as per the given condition.
+2.) Internet
+
+3.) UiPath Studio
+# Process:
+Open Excel File:
+
+Likely using the "Excel Application Scope" activity to open an Excel workbook.
+
+Read Data:
+
+Possibly using "Read Range" to load data into a DataTable.
+
+Data Manipulation:
+
+Activities like "For Each Row", "Assign", or "Filter Data Table" may be used to process or modify data.
+
+Write Data:
+
+May use "Write Range" to write updated data back to Excel.
+
+Close File:
+
+The Excel Application Scope handles auto-closing the file once the sequence ends.
+
+User Interaction or Logging:
+
+Since requiresUserInteraction: true, there might be message boxes or log messages showing updates or results.
+
+# Workflow Process Image:
+![Screenshot 2025-05-05 110348](https://github.com/user-attachments/assets/4d7a13f8-0305-4f0d-ada5-67f069e222e9)
+
+Read from the sheet 1
+![Screenshot 2025-05-05 110445](https://github.com/user-attachments/assets/8aa0f93c-7cc3-4859-8e02-adce6d24596f)
+
+Written in sheet 2
+![Screenshot 2025-05-05 110458](https://github.com/user-attachments/assets/9773e61e-5b1f-43eb-8cde-5be1c59aab11)
